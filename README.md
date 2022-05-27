@@ -1,4 +1,4 @@
-# 어디보자(Look)
+# 어디보자(Let me see)
 
 
 ## 프로젝트 계획 이유
@@ -28,6 +28,8 @@
 테스트 : ? (미정)
 
 배포 : Azure, AWS, Netlify, Vercel, Heroku ? (미정)
+
+업무관리 tool : notion, slack
 
 
 

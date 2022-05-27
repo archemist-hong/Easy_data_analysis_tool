@@ -21,6 +21,14 @@
 
 시각화 도구 : matplotlib, seaborn, plotly ? (미정)
 
+버전 관리 시스템 : GitHub
+
+패키지 관리 도구 : npm
+
+테스트 : ? (미정)
+
+배포 : Azure, AWS, Netlify, Vercel, Heroku ? (미정)
+
 
 
 개인정보 보호와 메모리 관리를 위해, 업로드 된 데이터는 30분에 한번씩 자동 삭제하려 함

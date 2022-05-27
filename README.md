@@ -43,16 +43,16 @@
 
 ### 메인 화면
 
-![image-20220527122346623](../images/README/image-20220527122346623.png)
+![image-20220527122346623](./images/README/image-20220527122346623.png)
 
 
 
 ### 요약, 시각화하기 페이지
 
-![image-20220527122413115](../images/README/image-20220527122413115.png)
+![image-20220527122413115](./images/README/image-20220527122413115.png)
 
 
 
 ### 결과 보고서 페이지
 
-![image-20220527122432833](../images/README/image-20220527122432833.png)
+![image-20220527122432833](./images/README/image-20220527122432833.png)

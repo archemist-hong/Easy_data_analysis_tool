@@ -13,10 +13,10 @@
     <!-- Bootstrap core CSS -->
     <link href="{{ url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!--Drop zone core js, CSS-->
-    <script src="../../static/js/dropzone.min.js"></script>
-    <link rel="stylesheet" href="../../static/css/dropzone.min.css" type="text/css" />
+    <script src="{{ url_for('static', filename='js/dropzone.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dropzone.min.css') }}" type="text/css" />
     <!--Tab menu core js-->
-    <script src="../../static/js/bootstrap.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
 
     <style>
       .bd-placeholder-img {

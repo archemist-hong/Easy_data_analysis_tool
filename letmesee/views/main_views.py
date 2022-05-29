@@ -1,3 +1,6 @@
+"""
+file : letmesee/views/main_views.py
+"""
 from flask import Blueprint, render_template
 
 main = Blueprint('main', __name__, url_prefix='/')
@@ -6,6 +9,6 @@ main = Blueprint('main', __name__, url_prefix='/')
 def index():
     return render_template('index.html')
 
-@main.route('/analysis/')
-def main_analysis():
-    return render_template('analysis/index.html')
+#@main.route('/analysis/')
+#def main_analysis():
+#    return render_template('analysis/index.html')

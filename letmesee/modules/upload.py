@@ -32,12 +32,13 @@ def upload_file():
         file_ext = os.path.splitext(filename)[1]
         if file_ext not in current_app.config['UPLOAD_EXTENSIONS']: # 추후 검증이 안되는 경우에도 400에러 발생
             return "Invalid data", 400
-        uploaded_file.save(os.path.join(current_app.config['UPLOAD_PATH'], filename))
+        else:
+            uploaded_file.save(os.path.join(current_app.config['UPLOAD_PATH'], filename))
     return '', 204
 
 @upload_bp.route('/uploads/<filename>')
 #@login_required : 사용자별로 데이터를 관리하기 위해서는 login이 필요할 것 같다.
 def upload(filename):
-    return send_from_directory(current_app.config['UPLOAD_PATH'], filename)
+    return send_from_directory('data', filename)
 
 # upload된 데이터가 올바른 데이터인지 검증하는 validate 함수, 추후 구현해야함

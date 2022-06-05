@@ -9,6 +9,10 @@ main = Blueprint('main', __name__, url_prefix='/')
 def index():
     return render_template('index.html')
 
-#@main.route('/analysis/')
-#def main_analysis():
-#    return render_template('analysis/index.html')
+@main.errorhandler(404)
+def page_not_found(error):
+    return render_template('page_not_found.html'), 404
+
+@main.route('/analysis/')
+def index_analysis():
+    return render_template('analysis/index.html')

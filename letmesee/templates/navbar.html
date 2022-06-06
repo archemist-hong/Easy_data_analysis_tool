@@ -1,0 +1,28 @@
+<!--file name : navbar.html-->
+<!--pwd : letmesee/templates/navbar.html-->
+
+<div class="container">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <img src = "{{ url_for('static',filename='icon/free-icon-analysis-809497.png') }}" width = "40" height = "32">
+        <span class="fs-4">어디보자</span>
+      </a>
+
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="{{ url_for('main.index') }}" class="nav-link px-2 link-secondary">Home</a></li>
+        <li><a href="{{ url_for('upload.index') }}" class="nav-link px-2 link-dark">Upload</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Summarize</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Statistical Testing</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
+      </ul>
+
+      <div class="col-md-3 text-end">
+        {% if g.user %}
+        <button type="button" class="btn btn-outline-primary me-2" onclick="window.location.href='{{ url_for( 'auth.logout' ) }}';">{{g.user.username}} (Log-out)</button>
+        {% else %}
+        <button type="button" class="btn btn-outline-primary me-2" onclick="window.location.href='{{ url_for( 'auth.login' ) }}';">Log-in</button>
+        {% endif %}
+        <button type="button" class="btn btn-primary" onclick="window.location.href='{{ url_for( 'auth.signup' ) }}';">Sign-up</button>
+      </div>
+    </header>
+  </div>

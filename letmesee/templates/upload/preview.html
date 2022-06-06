@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container py-4">
+  <h1>업로드 파일 미리보기</h1>
+    <hr>
+    <br>
+    <h4> 행(Row) 개수 : {{data_info['num_of_rows']}} </h4>
+    <h4> 열(Column) 개수 : {{data_info['num_of_cols']}} </h4>
+    <hr>
+    <br>
+    {% for table in data_info['df_to_html'] %}
+      {{table|safe}}
+    {% endfor %}
+    <br>
+    <button class="btn btn-primary" type="button" onClick="location.href='/'">메인 화면</button>
+    <button class="btn btn-dark" type="button" onClick="window.location.href='{{ url_for( 'upload.index' ) }}';">파일 업로드</button>
+    <button class="btn btn-dark" type="button" onClick="location.href='#'">데이터 요약</button>
+    <button class="btn btn-dark" type="button" onClick="location.href='#'">통계 분석</button>
+</div>
+{% endblock %}

@@ -1,84 +1,59 @@
-<!--
-file : letmesee/templates/index.html
--->
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="누구나 쉽게 하는 무료 데이터 분석 플랫폼, 어디보자">
-    <meta name="author" content="홍주영, 김승재">
-    <meta name="generator" content="Hugo 0.88.1">
-    <title>어디보자 v1.0</title>
-    <!-- canonical tag, 호스팅 하게 되면 주소로 변경해야함 -->
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/jumbotron/">
+<!--file name : index.html-->
+<!--pwd : letmesee/templates/index.html-->
 
-    <!-- Bootstrap core CSS -->
-    <link href="{{ url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+{% extends 'base.html' %}
+{% block content %}
+<!-- Main Contents -->
+<div class="container py-4">
+  <div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold">어디보자</h1>
+      <p class="col-md-8 fs-4">누구나 쉽게 하는 무료 데이터 분석 서비스, "어디보자"입니다.</p>
+      <button class="btn btn-primary btn-lg" type="button">사용 방법</button>
+    </div>
+  </div>
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-    
-  </head>
-
-  <body>   
-    <main>
-
-      <div class="container py-4">
-        <header class="pb-3 mb-4 border-bottom">
-          <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-            <img src = "{{ url_for('static',filename='icon/free-icon-analysis-809497.png') }}" width = "40" height = "32">
-            <span class="fs-4">어디보자</span>
-          </a>
-        </header>
-
-        <div class="p-5 mb-4 bg-light rounded-3">
-          <div class="container-fluid py-5">
-            <h1 class="display-5 fw-bold">어디보자</h1>
-            <p class="col-md-8 fs-4">누구나 쉽게 하는 무료 데이터 분석 서비스, "어디보자"입니다.</p>
-            <button class="btn btn-primary btn-lg" type="button">사용 방법</button>
-          </div>
-        </div>
-
-        <div class="row align-items-md-stretch">
-
-          <div class="col-md-6">
-            <div class="h-100 p-5 text-white bg-dark rounded-3">
-              <h2>데이터 요약, 시각화</h2>
-              <p>통계량 요약과 그래프를 통해 데이터를 한눈에 이해할 수 있도록 합니다.</p>
-              <button class="btn btn-outline-light" type="button" onClick="location.href='analysis/'">시작하기</button>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="h-100 p-5 bg-light border rounded-3">
-              <h2>통계 분석</h2>
-              <p>데이터 요약에서 발견한 궁금증을 통계분석을 통해 객관적으로 해결합니다.</p>
-              <button class="btn btn-outline-secondary" type="button">시작하기</button>
-            </div>
-          </div>
-
-        </div>
-
-        <footer class="pt-3 mt-4 text-muted border-top">
-          &copy; 2022
-        </footer>
-
+  <div class="row align-items-md-stretch">
+    <div class="col-md-6">
+      <div class="h-100 p-5 bg-light border rounded-3">
+        <h2>로그인</h2>
+        <p>서비스 이용을 위해 홈페이지에 로그인합니다.</p>
+        <button class="btn btn-outline-secondary" type="button" onclick="location.href='auth/login/'">시작하기</button>
       </div>
-    </main>
+    </div>
 
-  </body>
-</html>
+    <div class="col-md-6">
+      <div class="h-100 p-5 text-white bg-dark rounded-3">
+        <h2>데이터 업로드</h2>
+        <p>서비스 이용을 위해 분석에 사용할 데이터를 업로드 합니다.</p>
+        <button class="btn btn-outline-light" type="button" onClick="location.href='upload'">시작하기</button>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="row align-items-md-stretch">
+    <div class="col-md-6">
+      <div class="h-100 p-5 text-white bg-dark rounded-3">
+        <h2>데이터 요약, 시각화</h2>
+        <p>통계량 요약과 그래프를 통해 데이터를 한눈에 이해할 수 있도록 합니다.</p>
+        <button class="btn btn-outline-light" type="button" onClick="location.href='analysis'">시작하기</button>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="h-100 p-5 bg-light border rounded-3">
+        <h2>통계 분석</h2>
+        <p>데이터 요약에서 발견한 궁금증을 통계분석을 통해 객관적으로 해결합니다.</p>
+        <button class="btn btn-outline-secondary" type="button">시작하기</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="pt-3 mt-4 text-muted border-top">
+    &copy; 2022
+  </footer>
+
+</div>   
+{% endblock %}
